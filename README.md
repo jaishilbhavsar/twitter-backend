@@ -47,27 +47,53 @@ $ npm run start:prod
 
 ## Test
 
-```bash
-# unit tests
-$ npm run test
+Endpoints:
 
-# e2e tests
-$ npm run test:e2e
+#  USER
 
-# test coverage
-$ npm run test:cov
-```
+Signup: http://localhost:3000/user/signup
+Request Type:POST
+Body : {"userName":"Demo","password":"DemoPassword"}
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Login: http://localhost:3000/user/login
+Request Type:POST
+Body : {"userName":"Demo","password":"DemoPassword"}
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
+# TWEETS
+
+GetAllTweets: http://localhost:3000/tweet/getAllTweets
+Request Type:GET
+
+
+CreateTweet: http://localhost:3000/tweet/createTweet
+Request Type:POST
+Body : { "userID ":1, "tweetMessage":"Hi There.MyTweet"}
+
+
+UpdateTweet: http://localhost:3000/tweet/updateTweet
+Request Type:POST
+Body : { "tweetID":1, "tweetMessage":"update"}
+
+
+DeleteTweet: http://localhost:3000/tweet/deleteTweet/1
+Request Type:DELETE
+
+
+# Direct Messages
+
+GetAllDirectMessages: http://localhost:3000/directmessage/getAllDirectMessages
+Request Type:GET
+
+SendMessage: http://localhost:3000/directmessage/sendMessage
+Request Type:POST
+Body: {
+	"senderUserID":2,
+	"receiverUserID":1,
+	"message":"bye"
+}
 ## License
 
 Nest is [MIT licensed](LICENSE).
