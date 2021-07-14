@@ -22,7 +22,6 @@ export class JWTService {
                 payload: decoded
             }
         } catch (err) {
-            console.log(err);
             return {
                 status: false,
                 payload: null

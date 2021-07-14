@@ -47,6 +47,13 @@ $ npm run start:prod
 
 ## Test
 
+Databse : Database is hosted on clever clouds. Connection credentials are in .env file. No need to have database in local system.
+
+To start server run the command: 
+
+1)npm install (only once)
+2)npm run start
+
 Endpoints:
 
 #  USER
@@ -94,6 +101,28 @@ Body: {
 	"receiverUserID":1,
 	"message":"bye"
 }
+
+# Like/Unline Tweet
+
+NOTE : This API demonstrates sesion,token and authorization.
+NOTE: Please pass token(received after login) in header. In postman, Go to Authorization tab,select type 'Bearer Token' and pass the token value.
+
+GetAllLikesByTweetID: http://localhost:3000/tweet/getAllLikesByTweetID/1
+Request Type: GET
+
+
+LikeTweet: http://localhost:3000/tweet/likeTweet
+Request Type:POST
+Body: {
+	"tweetID":1,
+	"userID":1
+}
+
+UnlikeTweet : http://localhost:3000/tweet/unlikeTweet/1
+Request Type:DELETE
+
+
+
 ## License
 
 Nest is [MIT licensed](LICENSE).
